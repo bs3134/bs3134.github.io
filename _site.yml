@@ -11,8 +11,7 @@ navbar:
       href: http://github.com/bs3134/
     - text: "problem 2 dashboard"
       href: problem2.html
-    - text: "problem 2 code"
-      href: problem2.Rmd
+    
 output:
   html_document:
      theme: cosmo
