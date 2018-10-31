@@ -1,0 +1,70 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+
+---
+
+```{r1}
+library(flexdashboard)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+library(tidyverse)
+library(viridis)
+library(plotly)
+library(p8105.datasets)
+data=rest_inspec
+data1=data%>%
+  select(boro)%>%
+  group_by(boro)%>%
+  filter(!boro=="Missing")%>%
+  summarize(number=n())
+data1%>%
+  plot_ly(x = ~boro, y = ~number, color = ~boro, type = "bar") 
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+library(tidyverse)
+library(viridis)
+library(plotly)
+library(p8105.datasets)
+data=rest_inspec
+data2=data%>%
+  select(boro,score)%>%
+  filter(!boro=="Missing")%>%
+  filter(!is.na(score))
+data2%>%
+   plot_ly(y = ~score, color = ~boro, type = "box",
+          colors = "Set2")
+```
+
+### Chart C
+
+```{r}
+library(tidyverse)
+library(viridis)
+library(plotly)
+library(p8105.datasets)
+data=rest_inspec
+data3=data%>%
+  select(inspection_date,score)%>%
+  filter(!is.na(score))%>%
+  head(10000)
+data3%>%
+  plot_ly(x = ~inspection_date, y = ~score, type = "scatter", mode = "markers")
+```
+

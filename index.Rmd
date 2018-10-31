@@ -1,0 +1,25 @@
+---
+title: "Homework 4"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+
+---
+
+### This is my webpage.
+And you can access Google [here](https://www.google.com).
+
+### My favorite picture
+
+My cat is here:
+
+<img src="image/whitecat.jpg" style="width:50%">
+My introduction is in the aboout page. 
+
+<img src="image/blackcat.jpg" style="width:50%">
+
+
+### You can view the problem 2 answer on the top right.
+
+

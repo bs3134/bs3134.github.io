@@ -1,0 +1,18 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About me"
+      href: about.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<bihui2011@outlook.com>
+    - icon: fa-github fa-lg
+      href: http://github.com/bs3134/
+    - text: "problem 2 dashboard"
+      href: problem2.html
+    - text: "problem 2 code"
+      href: problem2.Rmd
+output:
+  html_document:
+     theme: cosmo
